@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { addNewFeature } from '../actions'
 
 const AdditionalFeature = props => {
 
-  addFeature = e => {
+  const addFeature = e => {
     e.preventDefault();
-    props.addNewFeature()
+    props.addNewFeature(props.feature)
   }
 
   return (
