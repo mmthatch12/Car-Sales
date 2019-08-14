@@ -7,7 +7,6 @@ const AddedFeature = props => {
     console.log("props.feature", props.feature.id)
     e.preventDefault();
     props.removeNewFeature(props.feature.id)
-  
   }
 
   return (

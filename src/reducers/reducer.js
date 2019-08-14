@@ -25,8 +25,13 @@ export const reducer = (state = initialState, action) => {
         case 'REMOVE_FEATURE':
             return {
                 ...state,
-                car: {...state.car, feature: state.car.features.filter(task => task.id)} 
-            }
+                car: {...state.car, features: state.car.features.filter(task => 
+                        {if(task.id !== action.payload) {
+                            return task
+                        } 
+                    })
+                }
+            };
         default:
             return state;
     }
