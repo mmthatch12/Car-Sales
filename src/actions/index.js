@@ -5,3 +5,7 @@ export const addNewFeature = feature => {
 export const removeNewFeature = feature => {
     return { type: 'REMOVE_FEATURE', payload: feature}
 }
+
+export const updatePrice = price => {
+    return{ type: 'UPDATE_PRICE', payload: price}
+}

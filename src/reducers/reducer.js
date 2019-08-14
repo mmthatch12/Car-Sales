@@ -32,6 +32,14 @@ export const reducer = (state = initialState, action) => {
                     })
                 }
             };
+        case 'UPDATE_PRICE':
+            return{
+                ...state,
+                car: {...state.car, additionalPrice: state.car.features.reduce((acc, value) => {
+                    return acc + value
+                }, action.payload.price)
+            }
+            }
         default:
             return state;
     }
